@@ -1,0 +1,1 @@
+Sets up the support role for ticketing system! *(User requires **Manage Server** to use this command)*

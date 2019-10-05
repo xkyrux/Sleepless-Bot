@@ -1,0 +1,1 @@
+Requests the logs for the current ticket

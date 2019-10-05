@@ -1,0 +1,1 @@
+Starts a poll for whatever you want! *(User requires **Manage Messages** to use this command)*
