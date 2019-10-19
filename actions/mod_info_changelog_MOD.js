@@ -37,7 +37,7 @@ subtitle: function(data) {
 author: "DBM Mods",
 
 // The version of the mod (Defaults to 1.0.0)
-version: "1.9.5",
+version: "1.9.6 ~ beta",
 
 // A short description to show on the mod line for this mod (Must be on a single line)
 short_description: "Changelog overview",
@@ -85,6 +85,63 @@ html: function(isEvent, data) {
 	return `
 <div>
 <div id ="wrexdiv" style="width: 550px; height: 350px; overflow-y: scroll;">
+	<p>
+	<h2>1.9.6: Almost everything requires beta! WOO!</h2>
+		● Added Check if File Exists<br>
+		● Added Generate Random Word<br>
+		● Added Merge Lists Mod<br>
+		● Added Slice Mod<br>
+		● Added Play Youtube (Revised default action)<br>
+		● Added Create Anchor Mod<br>
+		● Added Jump To Anchor Mod<br>
+		● Revised Check If Member<br>
+		● Revised Parse From Sored JSON<br>
+		● Revised Read File<br>
+		● Revised Store Member Info<br>
+		● Revised Check Variable<br>
+		● Revised Check Parameters<br>
+		● Revised Randomize Letters<br>
+		● Revised Remove Item From list<br>
+		● Revised Set Bot Activity<br>
+		● Revised Store Audio Info Mod<br>
+		● Revised Youtube Info Mod<br>
+		● Revised Check If User Reacted Mod<br>
+		● Revised Convert Seconds To Days Mod<br>
+		● Revissed File Control (V4)<br>
+		● Revised Game Server Mod<br>
+		● Fixed Create Voice Channel<br>
+		● Fixed Create Channel<br>
+		● Fixed Create Category<br>
+		● Fixed Store Channel Info<br>
+		● Fixed Send Image<br>
+		● Fixed Mod Info<br>
+	</p>
+	<p>
+	<h2>1.9.5: We fixed it all and YouTube Playlists are around now!</h2>
+		● Added Store Game Info<br>
+		● Added Find Item in List<br>
+		● Added Play YouTube Playlist<br>
+		● Added Store Twitch Info<br>
+		● Added Set Time Restriction<br>
+		● Added Global Data actions<br>
+		● Revised Store Category Info<br>
+		● Revised Control Variable<br>
+		● Revised Store Server Info<br>
+		● Revised YouTube Search<br>
+		● Revised Call Command/Event<br>
+		● Revised Remove Item From List<br>
+		● Revised Find Member<br>
+		● Revised Check If Member<br>
+		● Revised Set Member Voice Channel<br>
+		● Revised Embed Messaging actions<br>
+		● Revised Music System actions<br>
+		● Fixed Transfer Variable<br>
+		● Fixed Send Embed Message<br>
+		● Fixed Await Response Call Action<br>
+		● Fixed Await Reaction Call Action<br>
+		● Fixed Edit Channel<br>
+		● Fixed Store Channel Info<br>
+	</p>
 	<p>
 	<h2>1.9.4: owo Is this a release I see? A lot of revised mods.</h2>
 		● Added Convert Seconds to Days<br>

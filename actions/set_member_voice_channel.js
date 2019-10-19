@@ -28,6 +28,26 @@ subtitle: function(data) {
 },
 
 //---------------------------------------------------------------------
+// DBM Mods Manager Variables (Optional but nice to have!)
+//
+// These are variables that DBM Mods Manager uses to show information
+// about the mods for people to see in the list.
+//---------------------------------------------------------------------
+
+// Who made the mod (If not set, defaults to "DBM Mods")
+author: "DBM & MrGold",
+
+// The version of the mod (Defaults to 1.0.0)
+version: "1.9.5", //Added in 1.9.5
+
+// A short description to show on the mod line for this mod (Must be on a single line)
+short_description: "Sets a member on a Voice Channel",
+
+// If it depends on any other mods by name, ex: WrexMODS if the mod uses something from WrexMods
+
+//---------------------------------------------------------------------
+
+//---------------------------------------------------------------------
 // Action Fields
 //
 // These are the fields for the action. These fields are customized
@@ -55,6 +75,7 @@ fields: ["member", "varName", "channel", "varName2"],
 
 html: function(isEvent, data) {
 	return `
+<div><p>This action has been modified by DBM Mods.</p></div><br>
 <div style="padding-top: 8px;">
 	<div style="float: left; width: 35%;">
 		Source Member:<br>
@@ -106,13 +127,14 @@ init: function() {
 
 action: function(cache) {
 	const data = cache.actions[cache.index];
-	const storage = parseInt(data.channel);
-	const varName = this.evalMessage(data.varName, cache);
-	const channel = this.getChannel(storage, varName, cache);
 
-	const storage2 = parseInt(data.member);
+	const storage = parseInt(data.member);
+	const varName = this.evalMessage(data.varName, cache);
+	const member = this.getMember(storage, varName, cache);
+
+	const storage2 = parseInt(data.channel);
 	const varName2 = this.evalMessage(data.varName2, cache);
-	const member = this.getMember(storage2, varName2, cache);
+	const channel = this.getVoiceChannel(storage2, varName2, cache);
 
 	if(Array.isArray(member)) {
 		this.callListFunc(member, 'setVoiceChannel', [channel]).then(function() {

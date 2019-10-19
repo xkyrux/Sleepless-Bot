@@ -34,10 +34,10 @@ subtitle: function(data) {
 	//---------------------------------------------------------------------
 
 	// Who made the mod (If not set, defaults to "DBM Mods")
-	author: "EGGSY",
+	author: "EGGSY, TheMonDon",
 
 	// The version of the mod (Defaults to 1.0.0)
-	version: "1.8.7", //Added in 1.8.6
+	version: "1.9.6", //Added in 1.8.6
 
 	// A short description to show on the mod line for this mod (Must be on a single line)
 	short_description: "Slice anything!",
@@ -87,7 +87,7 @@ html: function(isEvent, data) {
 <div id="modinfo">
 	<p>
 	   <u>Mod Info:</u><br>
-	   Made by EGGSY!<br>
+	   Made by ${this.author}<br>
 	</p></div><br>
 	<div padding-top: 8px;">
 		Slice Text:<br>
@@ -117,7 +117,7 @@ html: function(isEvent, data) {
 		If you want to slice <b>you</b>, starting number = 0, slice length = 3.
 		</p>
 	</div>
-</div>`
+</div>`;
 },
 
 //---------------------------------------------------------------------
@@ -143,27 +143,24 @@ init: function() {
 //---------------------------------------------------------------------
 
 action: function(cache) {
-
 	const data = cache.actions[cache.index];
+	const varName = this.evalMessage(data.varName, cache);
 	const sliceText = this.evalMessage(data.slice, cache);
 	const startingFrom = parseInt(this.evalMessage(data.startingNumber, cache));
 	const sliceLength = parseInt(this.evalMessage(data.sliceLength, cache));
 
 	// Check if everything is ok
-	if(startingFrom < 0) return console.log("Your number can not be less than 0.")
+	if(startingFrom < 0) return console.log("Your number can not be less than 0.");
 	if(sliceLength == 0) return console.log("Slice length can not be 0.");
 	if(!sliceText) return console.log("Please write something to slice.");
 	if(!startingFrom && startingFrom != 0) return console.log("Please write a starting number.");
-	if(!sliceLength) return console.log("Please write slice length.");
+	if(!sliceLength) return console.log("Slice length can not be empty");
 
 	// Main code
-	result = `${sliceText}`.slice(`${startingFrom}`, `${sliceLength + startingFrom}`);
+	const result = `${sliceText}`.slice(`${startingFrom}`, `${sliceLength + startingFrom}`);
 
 	// Storing
-	const storage = parseInt(data.storage);
-	const varName = this.evalMessage(data.varName, cache);
-	this.storeValue(result, storage, varName, cache);
-
+	this.storeValue(result, data.storage, varName, cache);
 	this.callNextAction(cache);
 },
 

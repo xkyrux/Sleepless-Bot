@@ -6,7 +6,7 @@ module.exports = {
 	// This is the name of the action displayed in the editor.
 	//---------------------------------------------------------------------
 	
-	name: "Find Custom Emoji in Current Server",
+	name: "Create Anchor",
 	
 	//---------------------------------------------------------------------
 	// Action Section
@@ -14,7 +14,7 @@ module.exports = {
 	// This is the section the action will fall into.
 	//---------------------------------------------------------------------
 	
-	section: "Emoji Control",
+	section: "Other Stuff",
 	
 	//---------------------------------------------------------------------
 	// Action Subtitle
@@ -23,41 +23,11 @@ module.exports = {
 	//---------------------------------------------------------------------
 	
 	subtitle: function(data) {
-		const info = ['Emoji ID', 'Emoji Name'];
-		return `Find Emoji by ${info[parseInt(data.info)]}`;
+		return !!data.description ? `<font color="${data.color}">${data.description}</font>` : `Create ${!!data.anchor_id ? `the "<font color="${data.color}">${data.anchor_id}</font>" anchor at the current position!` : 'an anchor!'}`;
 	},
 	
-	//---------------------------------------------------------------------
-        // DBM Mods Manager Variables (Optional but nice to have!)
-        //
-        // These are variables that DBM Mods Manager uses to show information
-        // about the mods for people to see in the list.
-        //---------------------------------------------------------------------
-
-        // Who made the mod (If not set, defaults to "DBM Mods")
-        author: "Quinten",
-
-        // The version of the mod (Defaults to 1.0.0)
-        version: "1.9.2", //Added in 1.9.1
-
-        // A short description to show on the mod line for this mod (Must be on a single line)
-        short_description: "Finds a Custom Emoji in Server",
-
-        // If it depends on any other mods by name, ex: WrexMODS if the mod uses something from WrexMods
-
-        //---------------------------------------------------------------------
-	
-	//---------------------------------------------------------------------
-	// Action Storage Function
-	//
-	// Stores the relevant variable info for the editor.
-	//---------------------------------------------------------------------
-	
-	variableStorage: function(data, varType) {
-		const type = parseInt(data.storage);
-		if(type !== varType) return;
-		return ([data.varName, 'Emoji']);
-	},
+	author: "Deus Corvi && LeonZ",
+	version: "1.0.0",	// Added in 1.9.6
 	
 	//---------------------------------------------------------------------
 	// Action Fields
@@ -67,7 +37,7 @@ module.exports = {
 	// are also the names of the fields stored in the action's JSON data.
 	//---------------------------------------------------------------------
 	
-	fields: ["info", "find", "storage", "varName"],
+	fields: ["anchor_id", "color", "description"],
 	
 	//---------------------------------------------------------------------
 	// Command HTML
@@ -87,37 +57,28 @@ module.exports = {
 	
 	html: function(isEvent, data) {
 		return `
-	<div>
-	        <p>
-	                <u>Mod Info:</u><br>
-		        Created by Quinten
-	        </p>
-	</div><br>
-	<div>
-		<div style="float: left; width: 40%;">
-			Source Field:<br>
-			<select id="info" class="round">
-				<option value="0" selected>Emoji ID</option>
-				<option value="1">Emoji Name</option>
-			</select>
+		<div>
+			<p>
+				<u>Mod Info:</u><br>
+				This mod creates an anchor point for you to jump to without<br>
+				having to edit other jumps or skips.
+			</p>
+		</div><br>
+		<div style="float: left; width: 74%;">
+		  Anchor ID:<br>
+			<input type="text" class="round" id="anchor_id"><br>
 		</div>
-		<div style="float: right; width: 55%;">
-			Search Value:<br>
-			<input id="find" class="round" type="text">
+		<div style="float: left; width: 24%;">
+			Anchor Color:<br>
+			<input type="color" id="color"><br>
 		</div>
-	</div><br><br><br>
-	<div style="padding-top: 8px;">
-		<div style="float: left; width: 35%;">
-			Store In:<br>
-			<select id="storage" class="round">
-				${data.variables[1]}
-			</select>
+		<div>
+		<div style="float: left; width: 98%;">
+			Description:<br>
+			<input type="text" class="round" id="description">
 		</div>
-		<div id="varNameContainer" style="float: right; width: 60%;">
-			Variable Name:<br>
-			<input id="varName" class="round" type="text">
-		</div>
-	</div>`
+	</div>
+		`
 	},
 	
 	//---------------------------------------------------------------------
@@ -140,27 +101,6 @@ module.exports = {
 	//---------------------------------------------------------------------
 	
 	action: function(cache) {
-		const data = cache.actions[cache.index];
-		const msg = cache.msg
-		const guild = cache.guild
-		const info = parseInt(data.info);
-		const find = this.evalMessage(data.find, cache);
-		let result;
-		switch(info) {
-			case 0:
-				result = msg.guild.emojis.find(e => e.id === find);
-				break;
-			case 1:
-				result = msg.guild.emojis.find(e => e.name === find);
-				break;
-			default:
-				break;
-		}
-		if(result !== undefined) {
-			const storage = parseInt(data.storage);
-			const varName = this.evalMessage(data.varName, cache);
-			this.storeValue(result, storage, varName, cache);
-		}
 		this.callNextAction(cache);
 	},
 	

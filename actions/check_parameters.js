@@ -34,7 +34,27 @@ subtitle: function(data) {
 	const results = ["Continue Actions", "Stop Action Sequence", "Jump To Action", "Jump Forward Actions"];
 	return `If True: ${results[parseInt(data.iftrue)]} ~ If False: ${results[parseInt(data.iffalse)]}`;
 },
+//---------------------------------------------------------------------
+	 // DBM Mods Manager Variables (Optional but nice to have!)
+	 //
+	 // These are variables that DBM Mods Manager uses to show information
+	 // about the mods for people to see in the list.
+	 //---------------------------------------------------------------------
 
+// Who made the mod (If not set, defaults to "DBM Mods")
+author: "DBM, TheMonDon",
+
+// The version of the mod (Defaults to 1.0.0)
+version: "1.9.6", //Added in 1.9.6
+
+// A short description to show on the mod line for this mod (Must be on a single line)
+short_description: "Added more options to default action.",
+
+// If it depends on any other mods by name, ex: WrexMODS if the mod uses something from WrexMods
+
+
+//---------------------------------------------------------------------
+	 
 //---------------------------------------------------------------------
 // Action Fields
 //
@@ -64,6 +84,7 @@ fields: ["condition", "comparison", "value", "iftrue", "iftrueVal", "iffalse", "
 html: function(isEvent, data) {
 	return `
 <div>
+	<p>This action has been modified by DBM Mods.</p>
 	<div style="float: left; width: 45%;">
 		Condition:<br>
 		<select id="condition" class="round">
@@ -79,6 +100,8 @@ html: function(isEvent, data) {
 			<option value="0" selected>=</option>
 			<option value="1">\<</option>
 			<option value="2">\></option>
+			<option value="3">\>=</option>
+			<option value="4">\<=</option>
 		</select>
 	</div>
 	<div style="padding-left: 5%; float: left; width: 25%;">
@@ -146,6 +169,12 @@ action: function(cache) {
 				break;
 			case 2:
 				result = Boolean(value > value2);
+				break;
+			case 3: //Added by TheMonDon
+				result = Boolean(value >= value2);
+				break;
+			case 4: //Added by TheMonDon
+				result = Boolean(value <= value2);
 				break;
 		}
 	}
