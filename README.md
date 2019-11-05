@@ -16,7 +16,7 @@
 
 **2.** Open your data folder, open **settings.json** and fill in your bot credentials and choose a prefix!
 
-**3.** Open up a terminal directing to your bot's root folder
+**3.** Open up a command prompt window directing to your bot's root folder
 
 **4.** Type **node bot.js** and hit enter!
 
