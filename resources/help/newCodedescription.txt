@@ -1,0 +1,1 @@
+Sends you a new verification code if you forgot or did not receive yours

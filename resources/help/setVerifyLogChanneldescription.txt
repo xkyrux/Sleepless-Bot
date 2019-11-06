@@ -1,0 +1,1 @@
+Sets the channel that the bot will log every time a user verifies! *(User requires **Administrator** to use this command)*

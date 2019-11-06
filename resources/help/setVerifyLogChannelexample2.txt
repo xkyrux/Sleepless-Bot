@@ -1,0 +1,1 @@
+setVerifyLogChannel #verify-logs

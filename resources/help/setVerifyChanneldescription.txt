@@ -1,0 +1,1 @@
+Sets the channel users must verify in! *(User requires **Administrator** to use this command)*

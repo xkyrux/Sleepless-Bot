@@ -1,0 +1,1 @@
+Sets your status as "AFK" with a warning message to people who @ you

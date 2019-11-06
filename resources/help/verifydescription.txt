@@ -1,0 +1,1 @@
+Verifies that you are human if verification is set up for the current server
