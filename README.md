@@ -4,7 +4,9 @@
 
 [Discord](https://discord.gg/vgPEmsv)
 
-[Website](https://buildmybot.flarum.cloud/)
+[Website](https://www.sharemybot.com/)
+
+[Forum Page](https://forum.sharemybot.com/)
 
 
 
