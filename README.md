@@ -1,5 +1,5 @@
-# Share My Bot
- This is the official Share My Bot
+# Share My Bot / Build My Bot
+ This is the official Share My Bot AKA Build My Bot
 
 
 [Discord](https://discord.gg/vgPEmsv)
