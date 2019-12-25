@@ -4,7 +4,7 @@
 
 [Discord](https://discord.gg/vgPEmsv)
 
-[Website](https://www.sharemybot.com/)
+[Website](https://bots.sharemybot.com/)
 
 [Forum Page](https://forum.sharemybot.com/)
 
