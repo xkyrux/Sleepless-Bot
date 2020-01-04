@@ -1,10 +1,10 @@
-# Share My Bot / Build My Bot
- This is the official Share My Bot AKA Build My Bot
+# Sleepless Bot
+ This is the official Sleepless Bot
 
 
-[Discord](https://discord.gg/vgPEmsv)
+[Discord](https://discord.gg/R2jwy3p)
 
-[Website](https://bots.sharemybot.com/)
+[Website](https://www.sharemybot.com/)
 
 [Forum Page](https://forum.sharemybot.com/)
 
@@ -22,7 +22,7 @@
 
 **4.** Type **node bot.js** and hit enter!
 
-Your terminal should say **bot is ready!** within a couple seconds. If it does not or you get any errors, please head to our [Website](https://buildmybot.flarum.cloud/) or our [Discord](https://discord.gg/vgPEmsv) for help!
+Your terminal should say **bot is ready!** within a couple seconds. If it does not or you get any errors, please head to our [Forum Page](https://forum.sharemybot.com/) or our [Discord](https://discord.gg/R2jwy3p) for help!
 
 
 **BOT UPDATE**
@@ -45,3 +45,5 @@ You should be updated now! Go ahead and start your bot in the **NEW** bot folder
 **BOT UPDATE**
 
 [How to update your bot on glitch](https://youtu.be/EnHyuwFUqZw)
+
+Change the repo names when importing as needed
