@@ -4,10 +4,6 @@
 
 [Discord](https://discord.gg/s5usdPf)
 
-[Website](https://www.sharemybot.com/)
-
-[Forum Page](https://forum.sharemybot.com/)
-
 
 
 # Desktop Setup
@@ -22,7 +18,7 @@
 
 **4.** Type **node bot.js** and hit enter!
 
-Your terminal should say **bot is ready!** within a couple seconds. If it does not or you get any errors, please head to our [Forum Page](https://forum.sharemybot.com/) or our [Discord](https://discord.gg/s5usdPf) for help!
+Your terminal should say **bot is ready!** within a couple seconds. If it does not or you get any errors, please head to our [Discord](https://discord.gg/s5usdPf) for help!
 
 
 **BOT UPDATE**
