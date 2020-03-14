@@ -1,5 +1,7 @@
 # Sleepless Bot
- This is the official Sleepless Bot
+ This is the official Sleepless Bot made by `Sleepless Kyru#7615`
+
+If you see a bot with this code or looks exactly the same and they claim it to be their code, it is not true and you should not accept any downloads from them as it most likely altered from the original!
 
 
 [Discord](https://discord.gg/s5usdPf)
