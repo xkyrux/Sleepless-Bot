@@ -1,0 +1,40 @@
+{
+    "port": "3000",
+    "isBotSharded": false,
+    "tokenSecret": "ctq18rlx5tb",
+    "clientSecret": "",
+    "callbackURL": "http://localhost:3000/dashboard/callback",
+    "owner": "",
+    "inviteLink": "/dashboard/@me",
+    "supportServer": "https://discord.gg/s5usdPf",
+    "introText": "Welcome to Sleepless Bot! This dashboard is still under HEAVY development so not ALL of the bot functions are on the dashboard yet, but we will be adding more in the near future.",
+    "footerText": "Join our Discord server for help - https://discord.gg/s5usdPf",
+    "theme": "default",
+    "isGlitch": true,
+    "featureOne": {
+        "name": "Verification",
+        "description": "When enabled, Sleepless Bot will generate unique codes for each user that joins to have to verify they are human!"
+    },
+    "featureTwo": {
+        "name": "Ticket System",
+        "description": "Clean and easy ticket system for members to contact staff with! Users can quickly type the 'new' command to open a ticket and staff members with the 'Support Team' role can view the ticket and respond."
+    },
+    "featureThree": {
+        "name": "Open Source",
+        "description": "This bot is open source code so you can fork the [GitHub Repo](https://github.com/xkyrux/Sleepless-Bot) and host the bot your self!"
+    },
+    "featureFour": {
+        "name": "AFK Messages",
+        "description": "Your members can use the 'AFK' command to set their AFK stuatus. When someone @ mentions and AFK member, the bot will inform the other member that the mentioned user is AFK and display the reason that the AFK user has defined!"
+    },
+    "navItems": [{
+        "name": "Home Page",
+        "link": "/"
+    }, {
+        "name": "Dashboard",
+        "link": "/dashboard/@me"
+    }, {
+        "name": "Admin Panel",
+        "link": "/dashboard/admin"
+    }]
+}
