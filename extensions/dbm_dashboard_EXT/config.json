@@ -10,7 +10,7 @@
     "introText": "Welcome to Sleepless Bot! This dashboard is still under HEAVY development so not ALL of the bot functions are on the dashboard yet, but we will be adding more in the near future.",
     "footerText": "Join our Discord server for help - https://discord.gg/s5usdPf",
     "theme": "default",
-    "isGlitch": false,
+    "isGlitch": true,
     "featureOne": {
         "name": "Verification",
         "description": "When enabled, Sleepless Bot will generate unique codes for each user that joins to have to verify they are human!"
